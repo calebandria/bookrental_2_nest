@@ -1,8 +1,9 @@
-import { InternalServerErrorException } from "@nestjs/common";
+import { Injectable, InternalServerErrorException } from "@nestjs/common";
 import { RoleName, User } from "@prisma/client";
 import { AuthService } from "src/auth/auth.service";
 import { PrismaService } from "src/prisma/prisma.service";
 
+@Injectable()
 export class OauthService {
     constructor(
         private prisma: PrismaService,
