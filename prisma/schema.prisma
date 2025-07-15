@@ -32,7 +32,7 @@ model User {
   email String @unique
   firstname String?
   lastname String?
-  password String
+  password String?
   provider String
   providerId String
   createdAt DateTime @default(now())
